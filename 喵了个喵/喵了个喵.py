@@ -92,7 +92,7 @@ class MiaoMiao:
             if [] not in self.spcce_l:
                 print('游戏结束！！！')
                 break
-            if len(self.l1) + len(self.l2)+len(self.l3)+len(self.l4)+len(self.l5)+len(self.l6)+len(self.l7)+len(self.l7)+len(self.l9) == 0:
+            if len(self.l1) + len(self.l2)+len(self.l3)+len(self.l4)+len(self.l5)+len(self.l6)+len(self.l7)+len(self.l8)+len(self.l9) == 0:
                 print('恭喜通关！！！')
                 break
 
