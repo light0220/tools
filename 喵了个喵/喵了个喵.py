@@ -6,17 +6,18 @@
 '''
 import random
 
+
 class MiaoMiao:
-    spcce_l = [[],[],[],[],[],[],[]]
+    spcce_l = [[], [], [], [], [], [], []]
 
     def __init__(self) -> None:
         self.generate()
         self.check()
-        
+
     def generate(self):
         '''
         生成牌局'''
-        
+
         cat_pool = ['白猫', '黑猫', '黄猫', '蓝猫', '花猫', '粉猫', '大猫', '小猫']
 
         self.l1 = [random.choices(cat_pool) for i in range(9)]
@@ -34,20 +35,20 @@ class MiaoMiao:
         x = True
         while x:
             x = False
-            sum_l = self.l1 + self.l2 + self.l3 + self.l4 + self.l5 + self.l6 + self.l7 + self.l8 + self.l9
+            sum_l = self.l1 + self.l2 + self.l3 + self.l4 + \
+                self.l5 + self.l6 + self.l7 + self.l8 + self.l9
             for i in sum_l:
                 if sum_l.count(i) % 3 != 0:
                     x = True
                     self.generate()
                     break
-    
 
-    def select(self,l:list):
+    def select(self, l: list):
         tmp_l = l.pop()
         if tmp_l not in self.spcce_l:
             self.spcce_l[self.spcce_l.index([])] = tmp_l
         else:
-            self.spcce_l.insert(self.spcce_l.index(tmp_l),tmp_l)
+            self.spcce_l.insert(self.spcce_l.index(tmp_l), tmp_l)
             self.spcce_l.pop()
         if self.spcce_l.count(tmp_l) == 3:
             for i in range(3):
@@ -88,13 +89,14 @@ class MiaoMiao:
                 self.select(self.l9)
             else:
                 print('输入有误，请重新输入')
-            
+
             if [] not in self.spcce_l:
                 print('游戏结束！！！')
                 break
             if len(self.l1) + len(self.l2)+len(self.l3)+len(self.l4)+len(self.l5)+len(self.l6)+len(self.l7)+len(self.l8)+len(self.l9) == 0:
                 print('恭喜通关！！！')
                 break
+
 
 if __name__ == '__main__':
     miao = MiaoMiao()
