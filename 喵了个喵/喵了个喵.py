@@ -44,6 +44,9 @@ class MiaoMiao:
                     break
 
     def select(self, l: list):
+        if len(l) == 0:
+            print('当前位置已经没有猫了，请重新选择！')
+            return
         tmp_l = l.pop()
         if tmp_l not in self.spcce_l:
             self.spcce_l[self.spcce_l.index([])] = tmp_l
@@ -60,9 +63,9 @@ class MiaoMiao:
             lay = f'''
             欢迎游玩《喵了个喵》
             ====================
-            1.{self.l1[-1] if len(self.l1) != 0 else []}\t 2.{self.l2[-1] if len(self.l2) != 0 else []}\t 3.{self.l3[-1] if len(self.l3) != 0 else []}
-            4.{self.l4[-1] if len(self.l4) != 0 else []}\t 5.{self.l5[-1] if len(self.l5) != 0 else []}\t 6.{self.l6[-1] if len(self.l6) != 0 else []}
-            7.{self.l7[-1] if len(self.l7) != 0 else []}\t 8.{self.l8[-1] if len(self.l8) != 0 else []}\t 9.{self.l9[-1] if len(self.l9) != 0 else []}
+            1.{self.l1[-1] if len(self.l1) != 0 else '[      ]'}\t 2.{self.l2[-1] if len(self.l2) != 0 else '[      ]'}\t 3.{self.l3[-1] if len(self.l3) != 0 else '[      ]'}
+            4.{self.l4[-1] if len(self.l4) != 0 else '[      ]'}\t 5.{self.l5[-1] if len(self.l5) != 0 else '[      ]'}\t 6.{self.l6[-1] if len(self.l6) != 0 else '[      ]'}
+            7.{self.l7[-1] if len(self.l7) != 0 else '[      ]'}\t 8.{self.l8[-1] if len(self.l8) != 0 else '[      ]'}\t 9.{self.l9[-1] if len(self.l9) != 0 else '[      ]'}
             ====================
             空槽位：{self.spcce_l}
             ====================
