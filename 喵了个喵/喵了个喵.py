@@ -8,7 +8,7 @@ import random
 
 
 class MiaoMiao:
-    spcce_l = [[], [], [], [], [], [], []]
+    space_l = [[], [], [], [], [], [], []]
 
     def __init__(self) -> None:
         self.generate()
@@ -48,15 +48,15 @@ class MiaoMiao:
             print('当前位置已经没有猫了，请重新选择！')
             return
         tmp_l = l.pop()
-        if tmp_l not in self.spcce_l:
-            self.spcce_l[self.spcce_l.index([])] = tmp_l
+        if tmp_l not in self.space_l:
+            self.space_l[self.space_l.index([])] = tmp_l
         else:
-            self.spcce_l.insert(self.spcce_l.index(tmp_l), tmp_l)
-            self.spcce_l.pop()
-        if self.spcce_l.count(tmp_l) == 3:
+            self.space_l.insert(self.space_l.index(tmp_l), tmp_l)
+            self.space_l.pop()
+        if self.space_l.count(tmp_l) == 3:
             for i in range(3):
-                self.spcce_l.remove(tmp_l)
-                self.spcce_l.append([])
+                self.space_l.remove(tmp_l)
+                self.space_l.append([])
 
     def play(self):
         while True:
@@ -67,7 +67,7 @@ class MiaoMiao:
             4.{self.l4[-1] if len(self.l4) != 0 else '[      ]'}\t 5.{self.l5[-1] if len(self.l5) != 0 else '[      ]'}\t 6.{self.l6[-1] if len(self.l6) != 0 else '[      ]'}
             7.{self.l7[-1] if len(self.l7) != 0 else '[      ]'}\t 8.{self.l8[-1] if len(self.l8) != 0 else '[      ]'}\t 9.{self.l9[-1] if len(self.l9) != 0 else '[      ]'}
             ====================
-            空槽位：{self.spcce_l}
+            空槽位：{self.space_l}
             ====================
             请输入1~9将相应的猫放入空槽位：
             '''
@@ -93,7 +93,7 @@ class MiaoMiao:
             else:
                 print('输入有误，请重新输入')
 
-            if [] not in self.spcce_l:
+            if [] not in self.space_l:
                 print('游戏结束！！！')
                 break
             if len(self.l1) + len(self.l2)+len(self.l3)+len(self.l4)+len(self.l5)+len(self.l6)+len(self.l7)+len(self.l8)+len(self.l9) == 0:
