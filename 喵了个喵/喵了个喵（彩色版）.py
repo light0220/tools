@@ -3,7 +3,7 @@
 '''
 作  者    : 孙振光 light22@126.com
 创建时间  : 2022-10-16 17:50:12
-最后编辑  : 2022-10-16 18:32:19
+最后编辑  : 2022-10-28 13:38:57
 编辑人    : 孙振光
 '''
 from 喵了个喵 import MiaoMiao
@@ -37,9 +37,9 @@ class ColorMiao(MiaoMiao):
             lay = f'''
             欢迎游玩《喵了个喵》
             ====================
-            1.[{self.l1[-1][0] if len(self.l1) != 0 else '    '}]\t 2.[{self.l2[-1][0] if len(self.l2) != 0 else '    '}]\t 3.[{self.l3[-1][0] if len(self.l3) != 0 else '    '}]
-            4.[{self.l4[-1][0] if len(self.l4) != 0 else '    '}]\t 5.[{self.l5[-1][0] if len(self.l5) != 0 else '    '}]\t 6.[{self.l6[-1][0] if len(self.l6) != 0 else '    '}]
-            7.[{self.l7[-1][0] if len(self.l7) != 0 else '    '}]\t 8.[{self.l8[-1][0] if len(self.l8) != 0 else '    '}]\t 9.[{self.l9[-1][0] if len(self.l9) != 0 else '    '}]
+            1.[{self.l1[-1][0] if self.l1 else '    '}]\t 2.[{self.l2[-1][0] if self.l2 else '    '}]\t 3.[{self.l3[-1][0] if self.l3 else '    '}]
+            4.[{self.l4[-1][0] if self.l4 else '    '}]\t 5.[{self.l5[-1][0] if self.l5 else '    '}]\t 6.[{self.l6[-1][0] if self.l6 else '    '}]
+            7.[{self.l7[-1][0] if self.l7 else '    '}]\t 8.[{self.l8[-1][0] if self.l8 else '    '}]\t 9.[{self.l9[-1][0] if self.l9 else '    '}]
             ====================
             空槽位：[{self.space_l[0][0] if len(self.space_l[0]) != 0 else '    '}] [{self.space_l[1][0] if len(self.space_l[1]) != 0 else '    '}] [{self.space_l[2][0] if len(self.space_l[2]) != 0 else '    '}] [{self.space_l[3][0] if len(self.space_l[3]) != 0 else '    '}] [{self.space_l[4][0] if len(self.space_l[4]) != 0 else '    '}] [{self.space_l[5][0] if len(self.space_l[5]) != 0 else '    '}] [{self.space_l[6][0] if len(self.space_l[6]) != 0 else '    '}]
             ====================
